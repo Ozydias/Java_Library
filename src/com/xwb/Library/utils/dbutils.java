@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.Properties;
 
 /**
+ * 数据库连接类
  * @author xwb
  */
 public class dbutils {
@@ -31,7 +32,8 @@ public class dbutils {
 
     public static Connection getConnection() throws SQLException {
         try {
-            Class.forName(driver);                     //动态注册和加载jdbc类
+            //动态注册和加载jdbc类
+            Class.forName(driver);
             System.out.println("数据库驱动加载成功");
         }catch (ClassNotFoundException e){
             System.out.println("数据库驱动加载失败");

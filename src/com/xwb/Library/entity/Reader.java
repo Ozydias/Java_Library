@@ -4,12 +4,24 @@ package com.xwb.Library.entity;
  * @author xwb
  */
 public class Reader {
-    private int ReaderID;
+    private Integer ReaderID;
     private String FirstName;
     private String LastName;
     private String Address;
     private String PhoneNumber;
     private Integer Limits;
+
+    public Reader() {
+    }
+
+    public Reader(Integer readerID, String firstName, String lastName, String address, String phoneNumber, Integer limits) {
+        ReaderID = readerID;
+        FirstName = firstName;
+        LastName = lastName;
+        Address = address;
+        PhoneNumber = phoneNumber;
+        Limits = limits;
+    }
 
     public int getReaderID() {
         return ReaderID;
